@@ -1,0 +1,32 @@
+int main()
+{
+
+    int ANCHO,ALTO;
+
+    cout << "INGRESE EL ANCHO DEL TABLERO " ;
+    cin >> ANCHO;
+
+    cout << "INGRESE EL ALTO DEL TABLERO ";
+    cin >> ALTO;
+
+    char **Tablero = new char*[ALTO];
+
+    for (int i = 0 ; i<ALTO; i++){
+        Tablero [i] = new char [ANCHO];
+    }
+
+    for (int i=0; i<ALTO; i++){
+        for (int j=0; j < ANCHO; j++) {
+            Tablero [i][j] = '.';
+            }
+
+        }
+    for (int i=0; i<ALTO; i++){
+        for (int j=0; j<ANCHO; j++){
+            cout <<Tablero[i][j];
+                }
+
+            cout  << endl;
+        }
+        return 0;
+    }
